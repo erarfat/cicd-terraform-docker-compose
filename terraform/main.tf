@@ -24,7 +24,7 @@ resource "tls_private_key" "ssh_key" {
 
 resource "aws_key_pair" "genrated" {
   key_name = "directus-generated-key"
-  public_key = tls_private_key.ssh_key.private_key_openssh
+  public_key = tls_private_key.ssh_key.public_key_openssh
 }
 
 # Security Group
